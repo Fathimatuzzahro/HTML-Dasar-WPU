@@ -1,0 +1,186 @@
+HTML
+    - merupakan bhs markup bukan bhs pemrograman
+    - tdk punya var, funct, struktur kontrol
+    - di dlmnya terdapat serangkaian markup (tag) yg akan memberi tahu browser bgmn sebuah konten akan ditampilkan
+
+tag
+    1. head : 
+        a. judul hlmn (<title></title>)
+        b. css (<style></style>)
+        c. javascript (<script></script>)
+        d. metadata (<meta></meta>), terdapat :
+            - charset : character shet > menentukan encoding
+            - description
+            - keywords
+            - author
+
+    2. body
+        a. teks :
+            - <h1> sampai <h6> : heading
+            - <p> : paragraf
+        b. pendukung teks :
+            - <br> : baris baru
+            - <hr> : garis horizontal
+            - <em>
+            - <strong>
+        c. gambar :
+            - <img>
+        d. hyperlink :
+            - <a> : angker
+        e. list (bullets & numbering) :
+            - <ul> : list tdk terurut
+            - <ol> : list terurut
+            - <li>
+            - <dl> : definition list
+            - <dt>
+            - <dd>
+        f. tabel :
+            - <table>
+            - <thead>
+            - <tbody>
+        g. form :
+            - <form>
+            - <input>
+            - <select>
+            - <button>
+        h. script :
+            - <script>
+        i. object :
+            - <object>
+        j. grouping :
+            - <div>
+            - <span>
+        k. komentar :
+            - <!-- -->
+
+struktur tag : boleh punya atribut banyak, maupun tdk punya atribut sama sekali
+<namatag atribut="nilai">     
+contoh :
+<body bgcolor="lightblue">
+atau yg banyak atribut dan nilainya
+<body bgcolor="lightblue" id="myid" class="myclass">
+
+    1. atribut global
+        a. accesskey : untuk menentukan elemen ini bisa diakses menggunakan keyboard/shortcut
+        b. class
+        c. id
+        d. dir : untuk menentukan arah tulisannya/direction nya
+        e. lang : untuk language
+        f. style : untuk menyisipkan inline css
+        g. tabindex : untuk menentukan urutan fokus kursornya pindah kemana
+        h. title : memberi judul pada sebuah elemen
+
+        selengkapnya : www.w3school.com/Tags
+
+        <em> : digunakan untuk membuat penekanan pada teks, font miring
+        <strong> : untuk memberikan penekanan yang lebih kuat lagi, font bold
+
+HEADING
+kapan menggunakan?
+    cara paling mudah membuat hirarki kepentingan
+    1. judul artikel : menggunakan h1
+    2. sub judul : menggunakan h2
+
+LIST
+<ol></ol> : list terurut
+<li></li> : list item
+
+LINK
+    adalah sebuah koneksi dari sumber web ke sumber lain. 
+    dibuat dg <a></a> (anchor)
+
+OPEN IN A NEW TAB
+<a target=""></a>
+_self : membuka link di halaman yang sama. kalo tdk ditulis targetnya, sama saja kita menggunakan _self
+_blank : membuka link di tab baru
+_parent
+_top
+
+IMAGE
+<img src="">
+file gbr :
+    1. internal resource : gambar yg kita miliki sendiri di dalam folder
+    2. external resource / hotlink
+
+macam atributnya :
+    1. src : gbr tsb diambil dr mana
+    2. alt : untuk memberikan alternatif teks pada gambar/memberikan keterangan pada gambar jika suatu saat gbr tdk dpt dibuka
+    3. title : untuk memberikan judul pada gbr ketika kita meletakkan kursornya di atas gbr ttsb
+    4. width : mengatur lebar gbr
+    5. height :mengatur tinggi pada gbr
+
+    jika hanya menuliskan width, maka height nya akan menyesuaikan gbr. tetapi jika menggunakan keduanya, kemungkinan gbr nya akan tertarik/strech
+
+    untuk ukurannya, jika hanya menuliskan angka, maka akan terbaca sbg px / pixel. selain itu ada juga dlm bentuk persen
+
+TABEL
+pada HTML, tabel digunakan untuk menampilkan data yang bersifat tabular
+
+struktur tabel :
+    - baris
+    - kolom
+    - cell / data : perpotongan baris dan kolom
+    - header : judul dari tiap2 kolom
+
+<table></table>
+
+1. simple
+    <table>
+        <tr> => table row
+            <td>...</td> => table data
+        </tr>
+    </table>
+
+2. complex
+    <table>
+        <thead>
+            <tr> => membuat baris
+                <th></th> => table header
+                <th>Kolom 1</th>
+                <th>Kolom 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Baris 1</th>
+                <td>Baris 1, Kolom 1</td>
+                <td>Baris 1, Kolom 2</td>
+            </tr>
+            <tr>
+                <th>Baris 2</th>
+                <td>Baris 2, Kolom 1</td>
+                <td>Baris 2, Kolom 2</td>
+            </tr>
+        </tbody>
+    </table>
+
+ATRIBUT2 PADA TABEL
+    1. border : digunakan untuk menambahkan garis di sekitar cell
+    2. cellspacing : menambahk jarak antar cell
+    3. cellpadding : memberi luas pada cell
+    4. colspan
+    5. rowspan
+
+FORM
+    adalah sebuah elemen pada HTML yang digunakan untuk mengelola data dari input yang dilakukan oleh user
+
+    <form>
+        elemen2 yg ada di form
+    </form>
+
+elemen2 dlm form :
+    1. input : di mana user bisa menginputkan sesuatu
+    2.textarea : mirip seperti textfield, tapi lbh banyak yg bisa kita isikan seperti pesan komentar dll
+    3. select : digunakan untuk membuat dropdown atau combobox
+    4. button : tombol untuk mengirimkan datanya
+    5. label : untuk menandai sebuah elemen input
+
+    <input type="">
+        a. text : untuk membuat textfield
+        b. password
+        c. radio
+        d. checkbox
+    (yg di bawah ini tdk dibuat dg menggunakan input)
+        e. submit
+        f. reset
+        g. button
